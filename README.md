@@ -31,4 +31,12 @@ If you want to run the script periodically (every 10 minutes) in linux, you can 
 ```bash
 */10 * * * * bash /home/dm/production/start-crawling-prefecture.sh
 ```
-
+In order for the crontab job to run, you need to add environment variables at the end of your `.profile` file in `/home/dm/.profile`:
+```bash
+export GMAIL_USERNAME="your_gmail_username@gmail.com"
+export GMAIL_PASSWORD="your_gmail_password"
+export MAIL_DEST="your_mail@destination"
+export PNGS_DIR="/home/dm/pngs"
+export LOGS_DIR="/home/dm/logs"
+```
+You might need to do `source /home/dm/.profile` to activate these changes. 
