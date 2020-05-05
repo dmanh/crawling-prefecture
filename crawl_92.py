@@ -30,11 +30,10 @@ URL = r"http://www.hauts-de-seine.gouv.fr/booking/create/8485"
 
 #---------------- Create and configure logger -------------------------------
 logging.basicConfig(filename=os.path.join(LOGDIR,"crawling-prefecture-92.log"), 
-                    format='%(asctime)s %(message)s', filemode='w') 
+                    format='%(asctime)s %(levelname)s %(message)s',
+                    level=logging.INFO, filemode='a') 
 #Creating an object 
 logger = logging.getLogger() 
-#Setting the threshold of logger to DEBUG 
-logger.setLevel(logging.DEBUG) 
 
 def send_notification():
     msg = MIMEMultipart()
@@ -52,7 +51,7 @@ def send_notification():
     s.quit()
 
 def run_header():
-    logger.info("----------------------- START ---------------------------\n")
+    logger.info("----------------------- START ---------------------------")
     
     try: 
         driver = webdriver.Chrome()
@@ -63,7 +62,8 @@ def run_header():
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         driver.save_screenshot(os.path.join(SCREENDIR, 'screen0.png'))
         time.sleep(5)
-        
+        logger.info("Sleeping 5 seconds: 1st")
+
         try:
             driver.find_element_by_link_text("Accepter").click()
             logger.info("Passe accepter")
@@ -78,6 +78,7 @@ def run_header():
         checkbox.click()
         driver.save_screenshot(os.path.join(SCREENDIR, 'screen1.png'))
         time.sleep(5)
+        logger.info("Sleeping 5 seconds: 2nd")
         
         driver.maximize_window()
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
@@ -85,18 +86,19 @@ def run_header():
         checkbox.click()
         driver.save_screenshot(os.path.join(SCREENDIR, 'screen2.png'))
         time.sleep(5)
+        logger.info("Sleeping 5 seconds: 3rd")
         
         
         formbk = driver.find_element_by_id("FormBookingCreate")
         if not formbk.text.startswith("Il n'existe plus de plage horaire"):
             # Send notification email
-            logger.info("******" + "Good news" + "******")
+            logger.info("Good news")
             send_notification()
-            
         else:
-            logger.info("******" + formbk.text + "******")
+            logger.info(formbk.text)
         
-        time.sleep(10)
+        time.sleep(5)
+        logger.info("Sleeping 5 seconds: 4th")
         driver.quit()
     except Exception as err: 
         logger.error("Exception: " + str(err))
