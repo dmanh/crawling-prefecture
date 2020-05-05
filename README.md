@@ -29,6 +29,6 @@ sudo apt-get install xvfb
 If you want to run the script periodically (every 10 minutes) in linux, you can use crontab: 
 
 ```bash
-*/10 * * * * /home/dm/production/crawling-prefecture/crawl_92.py
+*/10 * * * * bash /home/dm/production/start-crawling-prefecture.sh
 ```
 
