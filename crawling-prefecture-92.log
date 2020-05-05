@@ -1,0 +1,60 @@
+2020-05-05 21:00:01,353 INFO Successfully started X with display ":1001".
+2020-05-05 21:00:01,353 INFO ----------------------- START ---------------------------
+2020-05-05 21:00:08,925 INFO Sleeping 5 seconds: 1st
+2020-05-05 21:00:09,004 INFO Passe accepter
+2020-05-05 21:00:14,377 INFO Sleeping 5 seconds: 2nd
+2020-05-05 21:00:20,998 INFO Sleeping 5 seconds: 3rd
+2020-05-05 21:00:21,040 INFO Il n'existe plus de plage horaire libre pour votre demande de rendez-vous. Veuillez recommencer ultérieurement.
+2020-05-05 21:00:26,045 INFO Sleeping 5 seconds: 4th
+2020-05-05 21:00:26,156 INFO ----------------------- FINISHED ------------------------
+
+2020-05-05 21:05:01,377 INFO Successfully started X with display ":1001".
+2020-05-05 21:05:01,378 INFO ----------------------- START ---------------------------
+2020-05-05 21:05:09,374 INFO Sleeping 5 seconds: 1st
+2020-05-05 21:05:09,453 INFO Passe accepter
+2020-05-05 21:05:14,830 INFO Sleeping 5 seconds: 2nd
+2020-05-05 21:05:21,697 INFO Sleeping 5 seconds: 3rd
+2020-05-05 21:05:21,739 INFO Il n'existe plus de plage horaire libre pour votre demande de rendez-vous. Veuillez recommencer ultérieurement.
+2020-05-05 21:05:26,745 INFO Sleeping 5 seconds: 4th
+2020-05-05 21:05:26,806 INFO ----------------------- FINISHED ------------------------
+
+2020-05-05 21:06:02,020 INFO Successfully started X with display ":1001".
+2020-05-05 21:06:02,021 INFO ----------------------- START ---------------------------
+2020-05-05 21:06:09,543 INFO Sleeping 5 seconds: 1st
+2020-05-05 21:06:09,628 INFO Passe accepter
+2020-05-05 21:06:15,010 INFO Sleeping 5 seconds: 2nd
+2020-05-05 21:06:21,535 INFO Sleeping 5 seconds: 3rd
+2020-05-05 21:06:21,576 INFO Il n'existe plus de plage horaire libre pour votre demande de rendez-vous. Veuillez recommencer ultérieurement.
+2020-05-05 21:06:26,578 INFO Sleeping 5 seconds: 4th
+2020-05-05 21:06:26,635 INFO ----------------------- FINISHED ------------------------
+
+2020-05-05 21:07:01,860 INFO Successfully started X with display ":1001".
+2020-05-05 21:07:01,860 INFO ----------------------- START ---------------------------
+2020-05-05 21:07:09,325 INFO Sleeping 5 seconds: 1st
+2020-05-05 21:07:09,408 INFO Passe accepter
+2020-05-05 21:07:14,776 INFO Sleeping 5 seconds: 2nd
+2020-05-05 21:07:21,967 INFO Sleeping 5 seconds: 3rd
+2020-05-05 21:07:22,011 INFO Il n'existe plus de plage horaire libre pour votre demande de rendez-vous. Veuillez recommencer ultérieurement.
+2020-05-05 21:07:27,017 INFO Sleeping 5 seconds: 4th
+2020-05-05 21:07:27,128 INFO ----------------------- FINISHED ------------------------
+
+2020-05-05 21:08:01,343 INFO Successfully started X with display ":1001".
+2020-05-05 21:08:01,344 INFO ----------------------- START ---------------------------
+2020-05-05 21:08:08,819 INFO Sleeping 5 seconds: 1st
+2020-05-05 21:08:08,903 INFO Passe accepter
+2020-05-05 21:08:14,275 INFO Sleeping 5 seconds: 2nd
+2020-05-05 21:08:20,722 INFO Sleeping 5 seconds: 3rd
+2020-05-05 21:08:20,766 INFO Il n'existe plus de plage horaire libre pour votre demande de rendez-vous. Veuillez recommencer ultérieurement.
+2020-05-05 21:08:25,771 INFO Sleeping 5 seconds: 4th
+2020-05-05 21:08:25,882 INFO ----------------------- FINISHED ------------------------
+
+2020-05-05 21:09:02,103 INFO Successfully started X with display ":1001".
+2020-05-05 21:09:02,103 INFO ----------------------- START ---------------------------
+2020-05-05 21:09:09,570 INFO Sleeping 5 seconds: 1st
+2020-05-05 21:09:09,657 INFO Passe accepter
+2020-05-05 21:09:15,038 INFO Sleeping 5 seconds: 2nd
+2020-05-05 21:09:21,444 INFO Sleeping 5 seconds: 3rd
+2020-05-05 21:09:21,482 INFO Il n'existe plus de plage horaire libre pour votre demande de rendez-vous. Veuillez recommencer ultérieurement.
+2020-05-05 21:09:26,487 INFO Sleeping 5 seconds: 4th
+2020-05-05 21:09:26,545 INFO ----------------------- FINISHED ------------------------
+
