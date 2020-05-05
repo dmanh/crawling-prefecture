@@ -4,6 +4,9 @@ This project checks the website http://www.hauts-de-seine.gouv.fr/booking/create
 
 # Prerequisites 
 
+## Valid gmail username and password 
+You need a valid gmail username and password to send to the destination email adress a notification message. Make sure that you disable the "Control acess to less secure apps" (https://myaccount.google.com/lesssecureapps). 
+
 ## Dependencies
 First, you need to install dependencies: 
 ```bash

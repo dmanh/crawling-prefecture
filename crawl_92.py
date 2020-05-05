@@ -22,8 +22,7 @@ USERNAME = os.environ["GMAIL_USERNAME"]
 PASSWORD = os.environ["GMAIL_PASSWORD"]
 # Email address to send to 
 SENDTO = os.environ["MAIL_DEST"]
-
-# Saved screen and logs directory
+# Saved screen and logs directory, change to your convenience. 
 SCREENDIR = os.environ["PNGS_DIR"]
 LOGDIR = os.environ["LOGS_DIR"]
 
@@ -107,7 +106,7 @@ def run_header():
 def execute():
     if os.name == "nt": # windows
         run_header()
-    else:
+    else: # linux to run headlessly
         display = Display(visible=0, size=(1920, 1080))
         display.start()
         run_header()
