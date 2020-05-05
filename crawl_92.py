@@ -26,23 +26,36 @@ SENDTO = os.environ["MAIL_DEST"]
 SCREENDIR = os.environ["PNGS_DIR"]
 LOGDIR = os.environ["LOGS_DIR"]
 
-#Create and configure logger 
+URL = r"http://www.hauts-de-seine.gouv.fr/booking/create/8485"
+
+#---------------- Create and configure logger -------------------------------
 logging.basicConfig(filename=os.path.join(LOGDIR,"crawling-prefecture-92.log"), 
                     format='%(asctime)s %(message)s', filemode='w') 
-  
 #Creating an object 
 logger = logging.getLogger() 
-  
 #Setting the threshold of logger to DEBUG 
 logger.setLevel(logging.DEBUG) 
 
+def send_notification():
+    msg = MIMEMultipart()
+    msg['subject'] = 'Plage horaire libre disponible'
+    msg['from'] = USERNAME
+    msg['to'] = SENDTO
+    message = 'Allez directement sur le site et enregistrer:' + URL
+    msg.attach(MIMEText(message))
+    s = smtplib.SMTP('smtp.gmail.com:587')
+    s.ehlo()
+    s.starttls()
+    # s.ehlo()
+    s.login(USERNAME , PASSWORD)
+    s.sendmail(USERNAME, SENDTO , msg.as_string())
+    s.quit()
 
 def run_header():
     logger.info("----------------------- START ---------------------------\n")
     
     try: 
         driver = webdriver.Chrome()
-        URL = r"http://www.hauts-de-seine.gouv.fr/booking/create/8485"
         
         # Get to the website
         driver.get(URL)
@@ -78,19 +91,8 @@ def run_header():
         if not formbk.text.startswith("Il n'existe plus de plage horaire"):
             # Send notification email
             logger.info("******" + "Good news" + "******")
-            msg = MIMEMultipart()
-            msg['subject'] = 'Plage horaire libre disponible'
-            msg['from'] = USERNAME
-            msg['to'] = SENDTO
-            message = 'Allez directement sur le site et enregistrer:'
-            msg.attach(MIMEText(message))
-            s = smtplib.SMTP('smtp.gmail.com:587')
-            s.ehlo()
-            s.starttls()
-            # s.ehlo()
-            s.login(USERNAME , PASSWORD)
-            s.sendmail(USERNAME, SENDTO , msg.as_string())
-            s.quit()
+            send_notification()
+            
         else:
             logger.info("******" + formbk.text + "******")
         
